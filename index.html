@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Test App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js" data-semver="1.0.7"></script>
+    <script src="app.js"></script>
+    <style>
+      #colorMePink {
+          height: 36px;
+          width: 120px;
+          margin: 10px;
+          background-color: pink;
+          color: red;
+          padding: 1em;
+        }
+    </style>
+  </head>
+
+  <body ng-controller="testCtrl" ng-init="init()">
+   
+    <span ng-controller="expertCtrl">
+             <select 
+              ng-model="selectedOption" 
+              ng-options="option.cat for option in options"
+              ng-change="changeCategory(selectedOption)"
+              id="Category"
+              >
+            </select>
+              <p></p>
+                <input id="setbtn" type="button" value="Build Profile" ng-click="showProfile()">
+               <p></p>
+          </span>
+
+   <button ng-click="showMe = !showMe">Click Me</button>
+  </body>
+
+</html>
