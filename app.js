@@ -25,9 +25,6 @@ $scope.init = function () {
 
 
 testApp.controller('expertCtrl', function($scope, $http) {
-
-
-
 var expertData = new Array();
 var optionNo = 0;
 var firsttime = true;
